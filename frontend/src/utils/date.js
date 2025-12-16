@@ -22,3 +22,9 @@ export const formatLastSeen = (lastSeen) => {
 
     return `Last seen on ${format(date, "dd MMM yyyy")}`;
 }
+
+export const formatDateTime = (dateString) => {
+    if (!dateString) return "-";
+    const date = new Date(dateString);
+    return format(date, "dd MMM yyyy • HH:mm");
+}

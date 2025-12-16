@@ -245,6 +245,7 @@ const ChatMsg = () => {
 
     // console.log("onlineUsers", onlineUsers);
 
+    //? cleanup function - only triggered when dependencies change or component unmounts
     return () => es.close();
     //todo: when onlineUsers state is added in dependancy arr, console goes crazy- too many re-renders
   }, [groupId, loggedInUserId]);
